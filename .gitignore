@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.db
+.env
+node_modules/
+generated_projects/*
+!generated_projects/.gitkeeps
