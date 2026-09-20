@@ -67,6 +67,9 @@ class Project(Base):
     user: Mapped["User"] = relationship(back_populates="projects")
     test_results: Mapped[list["TestResult"]] = relationship(back_populates="project", cascade="all, delete-orphan",
                                                             order_by="TestResult.id")
+    repair_attempts: Mapped[list["RepairAttempt"]] = relationship(back_populates="project",
+                                                                  cascade="all, delete-orphan",
+                                                                  order_by="RepairAttempt.id")
 
 
 class TestResult(Base):
@@ -83,3 +86,23 @@ class TestResult(Base):
     created_at: Mapped[dt.datetime] = mapped_column(DateTime, default=utc_now)
 
     project: Mapped["Project"] = relationship(back_populates="test_results")
+
+
+class RepairAttempt(Base):
+    """Section 17: store the error message, the repair attempt and the final result."""
+    __tablename__ = "repair_attempts"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    project_id: Mapped[int] = mapped_column(ForeignKey("projects.id"), index=True)
+    attempt: Mapped[int] = mapped_column(Integer)
+    error_type: Mapped[str] = mapped_column(String(50))
+    error_message: Mapped[str] = mapped_column(Text)
+    file: Mapped[str] = mapped_column(String(100))
+    diagnosis: Mapped[str] = mapped_column(Text)
+    result: Mapped[str] = mapped_column(String(50))       # fixed | improved | no_improvement_reverted | rejected...
+    passed_before: Mapped[int] = mapped_column(Integer)
+    passed_after: Mapped[int] = mapped_column(Integer)
+    total: Mapped[int] = mapped_column(Integer)
+    created_at: Mapped[dt.datetime] = mapped_column(DateTime, default=utc_now)
+
+    project: Mapped["Project"] = relationship(back_populates="repair_attempts")

@@ -49,6 +49,12 @@ def _build(db: Session, user: User, conversation: Conversation, spec: dict) -> t
 
     tests = run_tests(folder)
     _save_test_result(project, tests, db)
+    if not tests["success"]:                       # REPAIR stage: only runs when something failed
+        from app.agent.repair import repair_project
+        from app.agent.repair_routes import save_repair
+        outcome = repair_project(folder, spec)
+        save_repair(project, outcome, db)
+        tests = outcome["final_tests"]
     return project, tests
 
 

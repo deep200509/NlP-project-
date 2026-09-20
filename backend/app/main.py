@@ -2,6 +2,7 @@ from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import text
 
+from app.agent.repair_routes import router as repair_router
 from app.agent.routes import router as agent_router
 from app.auth.routes import router as auth_router
 from app.auth.security import get_current_user
@@ -29,7 +30,8 @@ app.add_middleware(
 
 login_required = [Depends(get_current_user)]
 
-app.include_router(auth_router)                                  # Phase 7: register / login
+app.include_router(auth_router)     
+app.include_router(repair_router)                                # Phase 9: self-repair loop (login inside)                             # Phase 7: register / login
 app.include_router(projects_router) 
 app.include_router(agent_router)                                 # Phase 8: chat agent (login inside)                             # Phase 7: saved projects (login inside)
 app.include_router(nlp_router)                                   # Phase 2-3: analysis only, stays open for demos
