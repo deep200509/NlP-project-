@@ -3,8 +3,12 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { useAuth } from "./auth.jsx";
 import Layout from "./components/Layout.jsx";
 import AuthPage from "./pages/AuthPage.jsx";
-import ComingSoon from "./pages/ComingSoon.jsx";
+import Chat from "./pages/Chat.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
+import History from "./pages/History.jsx";
+import ProjectDetail from "./pages/ProjectDetail.jsx";
+import Projects from "./pages/Projects.jsx";
+import Settings from "./pages/Settings.jsx";
 
 // Pages inside <Protected> can only be opened after logging in.
 function Protected({ children }) {
@@ -27,12 +31,12 @@ export default function App() {
 
       <Route element={<Protected><Layout /></Protected>}>
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/new-api" element={<ComingSoon title="New API" />} />
-        <Route path="/chat/:conversationId" element={<ComingSoon title="Chat" />} />
-        <Route path="/projects" element={<ComingSoon title="My projects" />} />
-        <Route path="/projects/:projectId" element={<ComingSoon title="Project" />} />
-        <Route path="/history" element={<ComingSoon title="Chat history" />} />
-        <Route path="/settings" element={<ComingSoon title="Settings" />} />
+        <Route path="/new-api" element={<Chat />} />
+        <Route path="/chat/:conversationId" element={<Chat />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/:projectId" element={<ProjectDetail />} />
+        <Route path="/history" element={<History />} />
+        <Route path="/settings" element={<Settings />} />
       </Route>
 
       <Route path="*" element={<Navigate to="/dashboard" replace />} />
