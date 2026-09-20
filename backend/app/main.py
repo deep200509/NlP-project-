@@ -2,10 +2,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import text
 
+from app.code_generator.routes import router as codegen_router
 from app.config import APP_NAME, APP_VERSION
 from app.database.database import Base, engine
 from app.nlp.routes import router as nlp_router
 from app.specification.routes import router as spec_router
+from app.testing.routes import router as testing_router
 
 # create tables (none yet - they arrive later)
 Base.metadata.create_all(bind=engine)
@@ -24,6 +26,10 @@ app.add_middleware(
 app.include_router(nlp_router)
 # Phase 4: specification endpoints (/spec/from-text and /spec/validate)
 app.include_router(spec_router)
+# Phase 5: code generation endpoints (/generate/from-text and /generate/from-spec)
+app.include_router(codegen_router)
+# Phase 6: automatic testing (/tests/run/{slug}) and the full pipeline (/pipeline/from-text)
+app.include_router(testing_router)
 
 
 @app.get("/")
