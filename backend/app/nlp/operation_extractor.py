@@ -62,7 +62,10 @@ def _find_action(chunk: str):
     """Returns (lexicon_intent, similarity_intent, similarity_score) for one chunk."""
     lexicon_hit, sim_hit, sim_score = None, None, 0.0
     content_seen = False
-    for token in get_nlp()(chunk):
+    doc = get_nlp()(chunk)
+    # a one-word chunk such as "marks" is a leftover list item, not a new clause
+    allow_similarity = sum(t.is_alpha for t in doc) >= 2
+    for token in doc:
         lemma = token.lemma_.lower()
         if not token.is_alpha or lemma in HELPER_VERBS or token.pos_ in ("DET", "PRON", "AUX", "ADP", "PART"):
             continue
@@ -70,7 +73,7 @@ def _find_action(chunk: str):
         content_seen = content_seen or first_content_word
         if lemma in ACTION_LEXICON and (token.pos_ == "VERB" or first_content_word):
             lexicon_hit = lexicon_hit or ACTION_LEXICON[lemma]
-        elif token.pos_ == "VERB" and lemma not in ACTION_LEXICON:
+        elif allow_similarity and token.pos_ == "VERB" and lemma not in ACTION_LEXICON:
             intent, score = similarity_intent(token)
             if score > sim_score:
                 sim_hit, sim_score = intent, score

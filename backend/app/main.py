@@ -5,6 +5,7 @@ from sqlalchemy import text
 from app.config import APP_NAME, APP_VERSION
 from app.database.database import Base, engine
 from app.nlp.routes import router as nlp_router
+from app.specification.routes import router as spec_router
 
 # create tables (none yet - they arrive later)
 Base.metadata.create_all(bind=engine)
@@ -21,6 +22,8 @@ app.add_middleware(
 
 # Phase 2: NLP endpoints (/nlp/preprocess and /nlp/intent)
 app.include_router(nlp_router)
+# Phase 4: specification endpoints (/spec/from-text and /spec/validate)
+app.include_router(spec_router)
 
 
 @app.get("/")
