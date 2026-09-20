@@ -65,7 +65,7 @@ def generate_readme(spec: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
-def generate_project(spec: dict) -> dict:
+def generate_project(spec: dict, folder: str | None = None) -> dict:
     files = {
         "database.py": generate_database(spec),
         "models.py": generate_models(spec),
@@ -83,7 +83,7 @@ def generate_project(spec: dict) -> dict:
         if name.endswith(".py"):
             compile(source, name, "exec")
 
-    project_dir = GENERATED_DIR / spec["slug"]
+    project_dir = GENERATED_DIR / (folder or spec["slug"])
     project_dir.mkdir(parents=True, exist_ok=True)
     old_database = project_dir / f"{spec['slug']}.db"
     if old_database.exists():          # the table layout may have changed

@@ -48,4 +48,4 @@ def preprocess(text: str) -> dict:
         "lemmas": lemmas,
         "without_stop_words": kept,
         "cleaned": " ".join(kept),
-    }
+    } 

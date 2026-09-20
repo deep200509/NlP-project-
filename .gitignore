@@ -5,3 +5,4 @@ __pycache__/
 node_modules/
 generated_projects/*
 !generated_projects/.gitkeeps
+*.key
