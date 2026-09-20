@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-import { api } from "../api.js";
+import { api, download } from "../api.js";
 import { useAuth } from "../auth.jsx";
 import EndpointList from "../components/EndpointList.jsx";
 import { TestResults, parseReport } from "../components/MessageBody.jsx";
@@ -53,6 +53,19 @@ export default function ProjectDetail() {
       setFile(await api(`/projects/${projectId}/files/${name}`));
     } catch (err) {
       setError(err.message);
+    }
+  }
+
+  async function downloadZip() {
+    setBusy("Preparing the download…"); setError(""); setNotice("");
+    try {
+      await download(`/projects/${projectId}/download`, `${project.specification.slug}.zip`);
+      await load();
+      setNotice("Download started. The zip contains the code, the tests and the documentation.");
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setBusy("");
     }
   }
 
@@ -141,6 +154,25 @@ export default function ProjectDetail() {
       </section>
 
       <section>
+        <h2>Documentation and download</h2>
+        <p className="muted section-note">
+          README.md explains how to run the project, API.md shows a request and a response example for
+          every endpoint, and openapi.json can be imported into Postman or Swagger Editor.
+        </p>
+        <div className="button-row">
+          <button type="button" className="button" disabled={Boolean(busy)} onClick={downloadZip}>Download project</button>
+          <button type="button" className="button-outline" disabled={Boolean(busy)}
+                  onClick={() => run("Writing the documentation…", `/projects/${projectId}/documentation`,
+                    (r) => `Documentation written: ${r.files.join(", ")}.`)}>
+            Write documentation
+          </button>
+          {project.files.includes("API.md") && (
+            <button type="button" className="button-outline" onClick={() => openFile("API.md")}>Read API reference</button>
+          )}
+        </div>
+      </section>
+
+      <section>
         <h2>Generated files</h2>
         <div className="file-tabs">
           {project.files.map((name) => (
@@ -149,7 +181,9 @@ export default function ProjectDetail() {
             </button>
           ))}
         </div>
-        {file ? <pre className="code"><code>{file.content}</code></pre> : <p className="hint">Choose a file to read its code.</p>}
+        {file
+          ? <pre className={file.name.endsWith(".md") ? "code code-document" : "code"}><code>{file.content}</code></pre>
+          : <p className="hint">Choose a file to read its code.</p>}
       </section>
 
       <section>

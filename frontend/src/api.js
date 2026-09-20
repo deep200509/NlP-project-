@@ -56,3 +56,26 @@ export async function api(path, { method = "GET", body } = {}) {
   }
   return data;
 }
+
+// Downloads a file that needs the login token (a normal link cannot send the token).
+export async function download(path, filename) {
+  const token = getToken();
+  let response;
+  try {
+    response = await fetch(BASE_URL + path, { headers: token ? { Authorization: `Bearer ${token}` } : {} });
+  } catch {
+    throw new ApiError(0, "Cannot reach the server. Check that the backend is running on port 8000.");
+  }
+  if (!response.ok) {
+    const data = await response.json().catch(() => null);
+    throw new ApiError(response.status, readableMessage(data, response.status), data);
+  }
+  const url = URL.createObjectURL(await response.blob());
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}

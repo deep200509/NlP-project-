@@ -55,6 +55,10 @@ def _build(db: Session, user: User, conversation: Conversation, spec: dict) -> t
         outcome = repair_project(folder, spec)
         save_repair(project, outcome, db)
         tests = outcome["final_tests"]
+    # DOCUMENT stage: README.md, API.md and openapi.json
+    from app.code_generator.project_generator import GENERATED_DIR
+    from app.documentation.generator import write_documentation
+    write_documentation(GENERATED_DIR / folder, spec, project.requirement)
     return project, tests
 
 

@@ -10,6 +10,7 @@ from app.code_generator.routes import router as codegen_router
 from app.config import APP_NAME, APP_VERSION
 from app.database import models  # noqa: F401  (importing registers the tables)
 from app.database.database import Base, engine
+from app.documentation.routes import router as documentation_router
 from app.nlp.routes import router as nlp_router
 from app.projects.dashboard import router as dashboard_router
 from app.projects.extras import router as project_extras_router
@@ -38,6 +39,7 @@ app.include_router(agent_router)                                 # Phase 8: chat
 app.include_router(repair_router)                                # Phase 9: self-repair loop (login inside)
 app.include_router(dashboard_router)                             # Phase 10: dashboard numbers (login inside)
 app.include_router(project_extras_router)                        # Phase 10: file viewer, regenerate (login inside)
+app.include_router(documentation_router)                         # Phase 11: documentation + download (login inside)
 app.include_router(nlp_router)                                   # Phase 2-3: analysis only, stays open for demos
 app.include_router(spec_router)                                  # Phase 4: analysis only, stays open for demos
 app.include_router(codegen_router, dependencies=login_required)  # Phase 5: writes files -> login required
