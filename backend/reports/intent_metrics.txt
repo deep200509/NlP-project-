@@ -1,0 +1,21 @@
+Model                   Accuracy  Macro F1  5-fold CV
+Logistic Regression        0.929     0.927      0.861
+Naive Bayes                0.886     0.886      0.828
+Linear SVM                 0.935     0.932      0.881
+
+Logistic Regression
+
+                precision    recall  f1-score   support
+
+AUTHENTICATION      1.000     1.000     1.000        16
+        CREATE      1.000     1.000     1.000        24
+        DELETE      0.885     0.958     0.920        24
+        FILTER      0.960     1.000     0.980        24
+          READ      0.966     1.000     0.982        28
+        SEARCH      0.870     0.833     0.851        24
+          SORT      0.789     0.750     0.769        20
+        UPDATE      0.955     0.875     0.913        24
+
+      accuracy                          0.929       184
+     macro avg      0.928     0.927     0.927       184
+  weighted avg      0.929     0.929     0.928       184

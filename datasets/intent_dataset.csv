@@ -1,0 +1,741 @@
+requirement,intent,entity,pattern_id
+add a new product,CREATE,product,1
+add a new student,CREATE,student,1
+add a new ticket,CREATE,ticket,1
+add a new customer,CREATE,customer,1
+create a course,CREATE,course,2
+create a patient,CREATE,patient,2
+create a doctor,CREATE,doctor,2
+create a student,CREATE,student,2
+enroll a new teacher in the system,CREATE,teacher,3
+enroll a new vehicle in the system,CREATE,vehicle,3
+enroll a new order in the system,CREATE,order,3
+enroll a new book in the system,CREATE,book,3
+insert a ticket record,CREATE,ticket,4
+insert a doctor record,CREATE,doctor,4
+insert a product record,CREATE,product,4
+insert a supplier record,CREATE,supplier,4
+users should be able to add orders,CREATE,order,5
+users should be able to add suppliers,CREATE,supplier,5
+users should be able to add hotels,CREATE,hotel,5
+users should be able to add products,CREATE,product,5
+allow admin to create new courses,CREATE,course,6
+allow admin to create new invoices,CREATE,invoice,6
+allow admin to create new orders,CREATE,order,6
+allow admin to create new vehicles,CREATE,vehicle,6
+i want to add a vehicle with email and age,CREATE,vehicle,7
+i want to add a hotel with price and category,CREATE,hotel,7
+i want to add a invoice with phone and salary,CREATE,invoice,7
+i want to add a course with salary and status,CREATE,course,7
+make a new course entry,CREATE,course,8
+make a new employee entry,CREATE,employee,8
+make a new patient entry,CREATE,patient,8
+make a new supplier entry,CREATE,supplier,8
+save a new patient to the database,CREATE,patient,9
+save a new supplier to the database,CREATE,supplier,9
+save a new movie to the database,CREATE,movie,9
+save a new student to the database,CREATE,student,9
+store order details,CREATE,order,10
+store patient details,CREATE,patient,10
+store book details,CREATE,book,10
+store invoice details,CREATE,invoice,10
+submit a new student,CREATE,student,11
+submit a new book,CREATE,book,11
+submit a new order,CREATE,order,11
+submit a new vehicle,CREATE,vehicle,11
+post a new supplier,CREATE,supplier,12
+post a new patient,CREATE,patient,12
+post a new employee,CREATE,employee,12
+post a new customer,CREATE,customer,12
+the system should let users create hotels,CREATE,hotel,13
+the system should let users create suppliers,CREATE,supplier,13
+the system should let users create patients,CREATE,patient,13
+the system should let users create courses,CREATE,course,13
+new employee creation,CREATE,employee,14
+new ticket creation,CREATE,ticket,14
+new invoice creation,CREATE,invoice,14
+new student creation,CREATE,student,14
+add supplier information to the system,CREATE,supplier,15
+add product information to the system,CREATE,product,15
+add vehicle information to the system,CREATE,vehicle,15
+add course information to the system,CREATE,course,15
+enter a new book record,CREATE,book,16
+enter a new teacher record,CREATE,teacher,16
+enter a new ticket record,CREATE,ticket,16
+enter a new order record,CREATE,order,16
+build an endpoint to add employees,CREATE,employee,17
+build an endpoint to add courses,CREATE,course,17
+build an endpoint to add vehicles,CREATE,vehicle,17
+build an endpoint to add patients,CREATE,patient,17
+create order with age,CREATE,order,18
+create teacher with status,CREATE,teacher,18
+create student with email,CREATE,student,18
+create hotel with price,CREATE,hotel,18
+insert new invoices into the database,CREATE,invoice,19
+insert new students into the database,CREATE,student,19
+insert new hotels into the database,CREATE,hotel,19
+insert new doctors into the database,CREATE,doctor,19
+users can enroll products,CREATE,product,20
+users can enroll hotels,CREATE,hotel,20
+users can enroll doctors,CREATE,doctor,20
+users can enroll suppliers,CREATE,supplier,20
+save course details such as rating and phone,CREATE,course,21
+save customer details such as city and date,CREATE,customer,21
+save teacher details such as name and city,CREATE,teacher,21
+save employee details such as title and category,CREATE,employee,21
+store a new patient in the system,CREATE,patient,22
+store a new employee in the system,CREATE,employee,22
+store a new order in the system,CREATE,order,22
+store a new book in the system,CREATE,book,22
+users can submit products,CREATE,product,23
+users can submit hotels,CREATE,hotel,23
+users can submit employees,CREATE,employee,23
+users can submit customers,CREATE,customer,23
+endpoint to post suppliers,CREATE,supplier,24
+endpoint to post customers,CREATE,customer,24
+endpoint to post movies,CREATE,movie,24
+endpoint to post students,CREATE,student,24
+make students and keep them in the database,CREATE,student,25
+make books and keep them in the database,CREATE,book,25
+make hotels and keep them in the database,CREATE,hotel,25
+make tickets and keep them in the database,CREATE,ticket,25
+enter ticket details like rating,CREATE,ticket,26
+enter product details like category,CREATE,product,26
+enter invoice details like price,CREATE,invoice,26
+enter hotel details like status,CREATE,hotel,26
+show all invoices,READ,invoice,27
+show all vehicles,READ,vehicle,27
+show all teachers,READ,teacher,27
+show all hotels,READ,hotel,27
+get doctor details,READ,doctor,28
+get movie details,READ,movie,28
+get vehicle details,READ,vehicle,28
+get product details,READ,product,28
+view all invoices,READ,invoice,29
+view all students,READ,student,29
+view all books,READ,book,29
+view all customers,READ,customer,29
+list all vehicles,READ,vehicle,30
+list all hotels,READ,hotel,30
+list all doctors,READ,doctor,30
+list all products,READ,product,30
+display the list of products,READ,product,31
+display the list of tickets,READ,ticket,31
+display the list of customers,READ,customer,31
+display the list of patients,READ,patient,31
+fetch a order by id,READ,order,32
+fetch a doctor by id,READ,doctor,32
+fetch a hotel by id,READ,hotel,32
+fetch a customer by id,READ,customer,32
+get a single teacher using its id,READ,teacher,33
+get a single patient using its id,READ,patient,33
+get a single course using its id,READ,course,33
+get a single vehicle using its id,READ,vehicle,33
+retrieve all student records,READ,student,34
+retrieve all supplier records,READ,supplier,34
+retrieve all product records,READ,product,34
+retrieve all course records,READ,course,34
+users can view students,READ,student,35
+users can view hotels,READ,hotel,35
+users can view vehicles,READ,vehicle,35
+users can view movies,READ,movie,35
+see every hotel in the system,READ,hotel,36
+see every invoice in the system,READ,invoice,36
+see every patient in the system,READ,patient,36
+see every movie in the system,READ,movie,36
+read patient information,READ,patient,37
+read vehicle information,READ,vehicle,37
+read product information,READ,product,37
+read invoice information,READ,invoice,37
+return all invoices,READ,invoice,38
+return all hotels,READ,hotel,38
+return all patients,READ,patient,38
+return all books,READ,book,38
+view movie profile,READ,movie,39
+view student profile,READ,student,39
+view product profile,READ,product,39
+view teacher profile,READ,teacher,39
+get the details of one supplier,READ,supplier,40
+get the details of one product,READ,product,40
+get the details of one customer,READ,customer,40
+get the details of one teacher,READ,teacher,40
+show me the vehicles,READ,vehicle,41
+show me the doctors,READ,doctor,41
+show me the hotels,READ,hotel,41
+show me the invoices,READ,invoice,41
+fetch all the invoices from the database,READ,invoice,42
+fetch all the orders from the database,READ,order,42
+fetch all the vehicles from the database,READ,vehicle,42
+fetch all the teachers from the database,READ,teacher,42
+find a book by id,READ,book,43
+find a vehicle by id,READ,vehicle,43
+find a student by id,READ,student,43
+find a product by id,READ,product,43
+list every order,READ,order,44
+list every doctor,READ,doctor,44
+list every hotel,READ,hotel,44
+list every ticket,READ,ticket,44
+display course details by id,READ,course,45
+display book details by id,READ,book,45
+display ticket details by id,READ,ticket,45
+display vehicle details by id,READ,vehicle,45
+retrieve a student using its id,READ,student,46
+retrieve a movie using its id,READ,movie,46
+retrieve a teacher using its id,READ,teacher,46
+retrieve a course using its id,READ,course,46
+users can see all hotels,READ,hotel,47
+users can see all teachers,READ,teacher,47
+users can see all movies,READ,movie,47
+users can see all tickets,READ,ticket,47
+read all invoice records,READ,invoice,48
+read all student records,READ,student,48
+read all course records,READ,course,48
+read all order records,READ,order,48
+return the employee with a given id,READ,employee,49
+return the product with a given id,READ,product,49
+return the ticket with a given id,READ,ticket,49
+return the teacher with a given id,READ,teacher,49
+get every course,READ,course,50
+get every customer,READ,customer,50
+get every invoice,READ,invoice,50
+get every doctor,READ,doctor,50
+find a product using its id,READ,product,51
+find a ticket using its id,READ,ticket,51
+find a supplier using its id,READ,supplier,51
+find a order using its id,READ,order,51
+show the full list of courses,READ,course,52
+show the full list of orders,READ,order,52
+show the full list of employees,READ,employee,52
+show the full list of customers,READ,customer,52
+update student information,UPDATE,student,53
+update doctor information,UPDATE,doctor,53
+update customer information,UPDATE,customer,53
+update course information,UPDATE,course,53
+change book salary,UPDATE,book,54
+change employee price,UPDATE,employee,54
+change hotel salary,UPDATE,hotel,54
+change vehicle category,UPDATE,vehicle,54
+edit hotel details,UPDATE,hotel,55
+edit customer details,UPDATE,customer,55
+edit movie details,UPDATE,movie,55
+edit doctor details,UPDATE,doctor,55
+modify an existing course,UPDATE,course,56
+modify an existing employee,UPDATE,employee,56
+modify an existing patient,UPDATE,patient,56
+modify an existing book,UPDATE,book,56
+update the rating of a employee,UPDATE,employee,57
+update the status of a invoice,UPDATE,invoice,57
+update the rating of a product,UPDATE,product,57
+update the email of a customer,UPDATE,customer,57
+users should be able to edit orders,UPDATE,order,58
+users should be able to edit vehicles,UPDATE,vehicle,58
+users should be able to edit customers,UPDATE,customer,58
+users should be able to edit doctors,UPDATE,doctor,58
+correct the status of a hotel,UPDATE,hotel,59
+correct the name of a book,UPDATE,book,59
+correct the rating of a doctor,UPDATE,doctor,59
+correct the rating of a student,UPDATE,student,59
+revise order record,UPDATE,order,60
+revise course record,UPDATE,course,60
+revise patient record,UPDATE,patient,60
+revise invoice record,UPDATE,invoice,60
+alter product data,UPDATE,product,61
+alter movie data,UPDATE,movie,61
+alter employee data,UPDATE,employee,61
+alter order data,UPDATE,order,61
+update a vehicle by id,UPDATE,vehicle,62
+update a movie by id,UPDATE,movie,62
+update a patient by id,UPDATE,patient,62
+update a student by id,UPDATE,student,62
+change the details of a teacher,UPDATE,teacher,63
+change the details of a customer,UPDATE,customer,63
+change the details of a patient,UPDATE,patient,63
+change the details of a employee,UPDATE,employee,63
+allow editing of employees,UPDATE,employee,64
+allow editing of products,UPDATE,product,64
+allow editing of movies,UPDATE,movie,64
+allow editing of books,UPDATE,book,64
+replace vehicle phone with a new value,UPDATE,vehicle,65
+replace product age with a new value,UPDATE,product,65
+replace doctor category with a new value,UPDATE,doctor,65
+replace patient age with a new value,UPDATE,patient,65
+patch customer details,UPDATE,customer,66
+patch course details,UPDATE,course,66
+patch patient details,UPDATE,patient,66
+patch hotel details,UPDATE,hotel,66
+make changes to a invoice,UPDATE,invoice,67
+make changes to a ticket,UPDATE,ticket,67
+make changes to a course,UPDATE,course,67
+make changes to a hotel,UPDATE,hotel,67
+amend hotel information,UPDATE,hotel,68
+amend student information,UPDATE,student,68
+amend ticket information,UPDATE,ticket,68
+amend employee information,UPDATE,employee,68
+set a new city for the vehicle,UPDATE,vehicle,69
+set a new salary for the order,UPDATE,order,69
+set a new rating for the invoice,UPDATE,invoice,69
+set a new price for the ticket,UPDATE,ticket,69
+users can modify product records,UPDATE,product,70
+users can modify vehicle records,UPDATE,vehicle,70
+users can modify invoice records,UPDATE,invoice,70
+users can modify ticket records,UPDATE,ticket,70
+correct wrong movie details,UPDATE,movie,71
+correct wrong employee details,UPDATE,employee,71
+correct wrong product details,UPDATE,product,71
+correct wrong patient details,UPDATE,patient,71
+revise the city of a course,UPDATE,course,72
+revise the city of a supplier,UPDATE,supplier,72
+revise the title of a invoice,UPDATE,invoice,72
+revise the salary of a customer,UPDATE,customer,72
+alter the price of an existing patient,UPDATE,patient,73
+alter the title of an existing course,UPDATE,course,73
+alter the salary of an existing movie,UPDATE,movie,73
+alter the phone of an existing customer,UPDATE,customer,73
+replace the old vehicle details,UPDATE,vehicle,74
+replace the old customer details,UPDATE,customer,74
+replace the old student details,UPDATE,student,74
+replace the old doctor details,UPDATE,doctor,74
+patch the name of a product,UPDATE,product,75
+patch the name of a hotel,UPDATE,hotel,75
+patch the phone of a invoice,UPDATE,invoice,75
+patch the age of a movie,UPDATE,movie,75
+amend a order record,UPDATE,order,76
+amend a product record,UPDATE,product,76
+amend a employee record,UPDATE,employee,76
+amend a vehicle record,UPDATE,vehicle,76
+set course rating to a different value,UPDATE,course,77
+set movie title to a different value,UPDATE,movie,77
+set invoice age to a different value,UPDATE,invoice,77
+set ticket city to a different value,UPDATE,ticket,77
+users can update their vehicle title,UPDATE,vehicle,78
+users can update their movie city,UPDATE,movie,78
+users can update their invoice salary,UPDATE,invoice,78
+users can update their order rating,UPDATE,order,78
+delete a movie,DELETE,movie,79
+delete a book,DELETE,book,79
+delete a employee,DELETE,employee,79
+delete a student,DELETE,student,79
+remove customer,DELETE,customer,80
+remove hotel,DELETE,hotel,80
+remove teacher,DELETE,teacher,80
+remove invoice,DELETE,invoice,80
+erase a ticket record,DELETE,ticket,81
+erase a patient record,DELETE,patient,81
+erase a invoice record,DELETE,invoice,81
+erase a order record,DELETE,order,81
+delete book by id,DELETE,book,82
+delete vehicle by id,DELETE,vehicle,82
+delete order by id,DELETE,order,82
+delete product by id,DELETE,product,82
+users should be able to delete patients,DELETE,patient,83
+users should be able to delete movies,DELETE,movie,83
+users should be able to delete employees,DELETE,employee,83
+users should be able to delete hotels,DELETE,hotel,83
+remove a student from the system,DELETE,student,84
+remove a employee from the system,DELETE,employee,84
+remove a customer from the system,DELETE,customer,84
+remove a supplier from the system,DELETE,supplier,84
+drop a book from the database,DELETE,book,85
+drop a ticket from the database,DELETE,ticket,85
+drop a vehicle from the database,DELETE,vehicle,85
+drop a invoice from the database,DELETE,invoice,85
+get rid of a hotel,DELETE,hotel,86
+get rid of a book,DELETE,book,86
+get rid of a supplier,DELETE,supplier,86
+get rid of a order,DELETE,order,86
+discard product entry,DELETE,product,87
+discard vehicle entry,DELETE,vehicle,87
+discard ticket entry,DELETE,ticket,87
+discard book entry,DELETE,book,87
+allow admin to remove invoices,DELETE,invoice,88
+allow admin to remove teachers,DELETE,teacher,88
+allow admin to remove orders,DELETE,order,88
+allow admin to remove suppliers,DELETE,supplier,88
+permanently delete customer data,DELETE,customer,89
+permanently delete patient data,DELETE,patient,89
+permanently delete student data,DELETE,student,89
+permanently delete doctor data,DELETE,doctor,89
+clear a doctor record,DELETE,doctor,90
+clear a order record,DELETE,order,90
+clear a book record,DELETE,book,90
+clear a supplier record,DELETE,supplier,90
+eliminate movie from the list,DELETE,movie,91
+eliminate supplier from the list,DELETE,supplier,91
+eliminate patient from the list,DELETE,patient,91
+eliminate vehicle from the list,DELETE,vehicle,91
+cancel and remove the ticket,DELETE,ticket,92
+cancel and remove the student,DELETE,student,92
+cancel and remove the employee,DELETE,employee,92
+cancel and remove the movie,DELETE,movie,92
+destroy invoice record,DELETE,invoice,93
+destroy employee record,DELETE,employee,93
+destroy order record,DELETE,order,93
+destroy customer record,DELETE,customer,93
+delete all details of a supplier,DELETE,supplier,94
+delete all details of a doctor,DELETE,doctor,94
+delete all details of a course,DELETE,course,94
+delete all details of a teacher,DELETE,teacher,94
+users can remove books,DELETE,book,95
+users can remove products,DELETE,product,95
+users can remove teachers,DELETE,teacher,95
+users can remove doctors,DELETE,doctor,95
+wipe a movie entry,DELETE,movie,96
+wipe a employee entry,DELETE,employee,96
+wipe a hotel entry,DELETE,hotel,96
+wipe a teacher entry,DELETE,teacher,96
+erase vehicles from the database,DELETE,vehicle,97
+erase tickets from the database,DELETE,ticket,97
+erase invoices from the database,DELETE,invoice,97
+erase teachers from the database,DELETE,teacher,97
+drop old courses,DELETE,course,98
+drop old teachers,DELETE,teacher,98
+drop old doctors,DELETE,doctor,98
+drop old hotels,DELETE,hotel,98
+get rid of unwanted teachers,DELETE,teacher,99
+get rid of unwanted hotels,DELETE,hotel,99
+get rid of unwanted vehicles,DELETE,vehicle,99
+get rid of unwanted orders,DELETE,order,99
+discard a order permanently,DELETE,order,100
+discard a vehicle permanently,DELETE,vehicle,100
+discard a invoice permanently,DELETE,invoice,100
+discard a course permanently,DELETE,course,100
+clear hotels from the system,DELETE,hotel,101
+clear invoices from the system,DELETE,invoice,101
+clear customers from the system,DELETE,customer,101
+clear vehicles from the system,DELETE,vehicle,101
+eliminate a doctor by id,DELETE,doctor,102
+eliminate a book by id,DELETE,book,102
+eliminate a invoice by id,DELETE,invoice,102
+eliminate a hotel by id,DELETE,hotel,102
+destroy a customer permanently,DELETE,customer,103
+destroy a student permanently,DELETE,student,103
+destroy a course permanently,DELETE,course,103
+destroy a book permanently,DELETE,book,103
+wipe vehicle data from the system,DELETE,vehicle,104
+wipe teacher data from the system,DELETE,teacher,104
+wipe supplier data from the system,DELETE,supplier,104
+wipe order data from the system,DELETE,order,104
+search doctors by salary,SEARCH,doctor,105
+search customers by title,SEARCH,customer,105
+search tickets by date,SEARCH,ticket,105
+search invoices by email,SEARCH,invoice,105
+find doctors by date,SEARCH,doctor,106
+find patients by rating,SEARCH,patient,106
+find teachers by category,SEARCH,teacher,106
+find invoices by date,SEARCH,invoice,106
+look up a teacher by price,SEARCH,teacher,107
+look up a order by email,SEARCH,order,107
+look up a vehicle by title,SEARCH,vehicle,107
+look up a course by rating,SEARCH,course,107
+search for a vehicle using phone,SEARCH,vehicle,108
+search for a employee using phone,SEARCH,employee,108
+search for a hotel using status,SEARCH,hotel,108
+search for a movie using city,SEARCH,movie,108
+find hotels whose age contains a keyword,SEARCH,hotel,109
+find products whose date contains a keyword,SEARCH,product,109
+find patients whose city contains a keyword,SEARCH,patient,109
+find suppliers whose category contains a keyword,SEARCH,supplier,109
+search order records with a keyword,SEARCH,order,110
+search movie records with a keyword,SEARCH,movie,110
+search product records with a keyword,SEARCH,product,110
+search vehicle records with a keyword,SEARCH,vehicle,110
+users can search doctors by age,SEARCH,doctor,111
+users can search books by status,SEARCH,book,111
+users can search vehicles by city,SEARCH,vehicle,111
+users can search employees by status,SEARCH,employee,111
+lookup tickets matching a date,SEARCH,ticket,112
+lookup products matching a date,SEARCH,product,112
+lookup teachers matching a email,SEARCH,teacher,112
+lookup books matching a age,SEARCH,book,112
+search for suppliers named something,SEARCH,supplier,113
+search for courses named something,SEARCH,course,113
+search for doctors named something,SEARCH,doctor,113
+search for students named something,SEARCH,student,113
+find a course with a specific salary,SEARCH,course,114
+find a teacher with a specific title,SEARCH,teacher,114
+find a invoice with a specific rating,SEARCH,invoice,114
+find a vehicle with a specific phone,SEARCH,vehicle,114
+query movies by price,SEARCH,movie,115
+query students by email,SEARCH,student,115
+query doctors by category,SEARCH,doctor,115
+query orders by category,SEARCH,order,115
+keyword search on vehicles,SEARCH,vehicle,116
+keyword search on movies,SEARCH,movie,116
+keyword search on courses,SEARCH,course,116
+keyword search on students,SEARCH,student,116
+locate a invoice by category,SEARCH,invoice,117
+locate a employee by rating,SEARCH,employee,117
+locate a student by rating,SEARCH,student,117
+locate a order by title,SEARCH,order,117
+search the doctor list,SEARCH,doctor,118
+search the product list,SEARCH,product,118
+search the student list,SEARCH,student,118
+search the vehicle list,SEARCH,vehicle,118
+allow searching doctors by name or rating,SEARCH,doctor,119
+allow searching orders by age or title,SEARCH,order,119
+allow searching movies by status or phone,SEARCH,movie,119
+allow searching vehicles by status or date,SEARCH,vehicle,119
+find matching suppliers by typing the category,SEARCH,supplier,120
+find matching tickets by typing the phone,SEARCH,ticket,120
+find matching courses by typing the status,SEARCH,course,120
+find matching orders by typing the category,SEARCH,order,120
+look up products using a keyword,SEARCH,product,121
+look up books using a keyword,SEARCH,book,121
+look up orders using a keyword,SEARCH,order,121
+look up invoices using a keyword,SEARCH,invoice,121
+query the movie list with a search term,SEARCH,movie,122
+query the customer list with a search term,SEARCH,customer,122
+query the invoice list with a search term,SEARCH,invoice,122
+query the vehicle list with a search term,SEARCH,vehicle,122
+locate courses matching a keyword,SEARCH,course,123
+locate vehicles matching a keyword,SEARCH,vehicle,123
+locate invoices matching a keyword,SEARCH,invoice,123
+locate orders matching a keyword,SEARCH,order,123
+search box to find tickets by age,SEARCH,ticket,124
+search box to find teachers by name,SEARCH,teacher,124
+search box to find orders by category,SEARCH,order,124
+search box to find invoices by age,SEARCH,invoice,124
+find teachers by city or price,SEARCH,teacher,125
+find doctors by email or title,SEARCH,doctor,125
+find customers by email or city,SEARCH,customer,125
+find tickets by rating or date,SEARCH,ticket,125
+users can look up employees by age,SEARCH,employee,126
+users can look up patients by date,SEARCH,patient,126
+users can look up hotels by title,SEARCH,hotel,126
+users can look up customers by price,SEARCH,customer,126
+find tickets under 50,FILTER,ticket,127
+find patients under 18,FILTER,patient,127
+find doctors under 50000,FILTER,doctor,127
+find orders under 5000,FILTER,order,127
+filter employees by title,FILTER,employee,128
+filter suppliers by rating,FILTER,supplier,128
+filter orders by email,FILTER,order,128
+filter invoices by email,FILTER,invoice,128
+show products with email greater than 1000,FILTER,product,129
+show patients with phone greater than 1000,FILTER,patient,129
+show employees with category greater than 18,FILTER,employee,129
+show customers with age greater than 500,FILTER,customer,129
+get customers where category is below 50,FILTER,customer,130
+get invoices where salary is below 50,FILTER,invoice,130
+get suppliers where email is below 1000,FILTER,supplier,130
+get doctors where salary is below 10,FILTER,doctor,130
+list employees with salary between 100 and 200,FILTER,employee,131
+list students with salary between 10 and 20,FILTER,student,131
+list invoices with city between 500 and 1000,FILTER,invoice,131
+list vehicles with rating between 50000 and 100000,FILTER,vehicle,131
+only show courses that have status above 50000,FILTER,course,132
+only show vehicles that have title above 50,FILTER,vehicle,132
+only show hotels that have city above 50000,FILTER,hotel,132
+only show invoices that have city above 1000,FILTER,invoice,132
+filter customer records by date and phone,FILTER,customer,133
+filter order records by email and date,FILTER,order,133
+filter movie records by date and price,FILTER,movie,133
+filter ticket records by title and age,FILTER,ticket,133
+show only active courses,FILTER,course,134
+show only active employees,FILTER,employee,134
+show only active books,FILTER,book,134
+show only active students,FILTER,student,134
+get suppliers whose name is less than 5000,FILTER,supplier,135
+get hotels whose category is less than 100,FILTER,hotel,135
+get customers whose price is less than 1000,FILTER,customer,135
+get courses whose name is less than 500,FILTER,course,135
+users can filter suppliers by rating,FILTER,supplier,136
+users can filter doctors by category,FILTER,doctor,136
+users can filter movies by status,FILTER,movie,136
+users can filter invoices by phone,FILTER,invoice,136
+display tickets with salary equal to 100,FILTER,ticket,137
+display students with date equal to 500,FILTER,student,137
+display teachers with title equal to 50000,FILTER,teacher,137
+display hotels with category equal to 18,FILTER,hotel,137
+narrow down customers by date,FILTER,customer,138
+narrow down books by email,FILTER,book,138
+narrow down teachers by category,FILTER,teacher,138
+narrow down orders by name,FILTER,order,138
+list suppliers created after a given date,FILTER,supplier,139
+list patients created after a given date,FILTER,patient,139
+list courses created after a given date,FILTER,course,139
+list employees created after a given date,FILTER,employee,139
+show doctors having date more than 18,FILTER,doctor,140
+show courses having status more than 500,FILTER,course,140
+show movies having phone more than 10,FILTER,movie,140
+show students having salary more than 500,FILTER,student,140
+filter the course list based on city,FILTER,course,141
+filter the ticket list based on email,FILTER,ticket,141
+filter the student list based on name,FILTER,student,141
+filter the doctor list based on price,FILTER,doctor,141
+get invoices in a phone range,FILTER,invoice,142
+get teachers in a category range,FILTER,teacher,142
+get employees in a phone range,FILTER,employee,142
+get hotels in a category range,FILTER,hotel,142
+find suppliers with email under 1000,FILTER,supplier,143
+find patients with category under 500,FILTER,patient,143
+find teachers with salary under 100,FILTER,teacher,143
+find orders with price under 500,FILTER,order,143
+find courses above 50000,FILTER,course,144
+find customers above 1000,FILTER,customer,144
+find vehicles above 500,FILTER,vehicle,144
+find hotels above 5000,FILTER,hotel,144
+narrow the vehicle list to email below 10,FILTER,vehicle,145
+narrow the movie list to age below 1000,FILTER,movie,145
+narrow the order list to city below 500,FILTER,order,145
+narrow the supplier list to phone below 100,FILTER,supplier,145
+only teachers where category is greater than 50,FILTER,teacher,146
+only movies where title is greater than 100,FILTER,movie,146
+only patients where price is greater than 100,FILTER,patient,146
+only customers where rating is greater than 10,FILTER,customer,146
+show only products with city under 50,FILTER,product,147
+show only teachers with name under 50,FILTER,teacher,147
+show only orders with status under 50000,FILTER,order,147
+show only tickets with city under 100,FILTER,ticket,147
+get doctors created before a given date,FILTER,doctor,148
+get orders created before a given date,FILTER,order,148
+get customers created before a given date,FILTER,customer,148
+get invoices created before a given date,FILTER,invoice,148
+sort doctors by age,SORT,doctor,149
+sort hotels by date,SORT,hotel,149
+sort students by rating,SORT,student,149
+sort movies by email,SORT,movie,149
+order patients by date,SORT,patient,150
+order products by rating,SORT,product,150
+order vehicles by name,SORT,vehicle,150
+order books by salary,SORT,book,150
+arrange orders in ascending order of status,SORT,order,151
+arrange doctors in ascending order of title,SORT,doctor,151
+arrange movies in ascending order of email,SORT,movie,151
+arrange invoices in ascending order of date,SORT,invoice,151
+list patients sorted by age descending,SORT,patient,152
+list teachers sorted by salary descending,SORT,teacher,152
+list products sorted by age descending,SORT,product,152
+list courses sorted by phone descending,SORT,course,152
+sort the product list alphabetically,SORT,product,153
+sort the course list alphabetically,SORT,course,153
+sort the customer list alphabetically,SORT,customer,153
+sort the employee list alphabetically,SORT,employee,153
+show customers from highest to lowest date,SORT,customer,154
+show courses from highest to lowest category,SORT,course,154
+show tickets from highest to lowest price,SORT,ticket,154
+show doctors from highest to lowest category,SORT,doctor,154
+order employee records by newest first,SORT,employee,155
+order hotel records by newest first,SORT,hotel,155
+order doctor records by newest first,SORT,doctor,155
+order book records by newest first,SORT,book,155
+users can sort suppliers by name,SORT,supplier,156
+users can sort books by category,SORT,book,156
+users can sort patients by salary,SORT,patient,156
+users can sort courses by rating,SORT,course,156
+rank vehicles by phone,SORT,vehicle,157
+rank customers by name,SORT,customer,157
+rank movies by phone,SORT,movie,157
+rank students by title,SORT,student,157
+arrange doctors by email in descending order,SORT,doctor,158
+arrange teachers by date in descending order,SORT,teacher,158
+arrange employees by status in descending order,SORT,employee,158
+arrange vehicles by rating in descending order,SORT,vehicle,158
+sort tickets from lowest to highest status,SORT,ticket,159
+sort books from lowest to highest phone,SORT,book,159
+sort employees from lowest to highest name,SORT,employee,159
+sort patients from lowest to highest rating,SORT,patient,159
+display vehicles in order of city,SORT,vehicle,160
+display movies in order of age,SORT,movie,160
+display products in order of name,SORT,product,160
+display hotels in order of salary,SORT,hotel,160
+order the results by price,SORT,none,161
+show latest books first,SORT,book,162
+show latest courses first,SORT,course,162
+show latest doctors first,SORT,doctor,162
+show latest invoices first,SORT,invoice,162
+sort course records in ascending order,SORT,course,163
+sort movie records in ascending order,SORT,movie,163
+sort ticket records in ascending order,SORT,ticket,163
+sort doctor records in ascending order,SORT,doctor,163
+allow sorting of books by email or rating,SORT,book,164
+allow sorting of patients by category or city,SORT,patient,164
+allow sorting of doctors by date or rating,SORT,doctor,164
+allow sorting of tickets by category or date,SORT,ticket,164
+rank movies from highest to lowest email,SORT,movie,165
+rank employees from highest to lowest price,SORT,employee,165
+rank customers from highest to lowest phone,SORT,customer,165
+rank teachers from highest to lowest name,SORT,teacher,165
+arrange the movie list alphabetically,SORT,movie,166
+arrange the patient list alphabetically,SORT,patient,166
+arrange the hotel list alphabetically,SORT,hotel,166
+arrange the employee list alphabetically,SORT,employee,166
+newest patients first,SORT,patient,167
+newest teachers first,SORT,teacher,167
+newest invoices first,SORT,invoice,167
+newest doctors first,SORT,doctor,167
+list teachers in descending order of city,SORT,teacher,168
+list tickets in descending order of status,SORT,ticket,168
+list books in descending order of age,SORT,book,168
+list hotels in descending order of category,SORT,hotel,168
+show oldest doctors first,SORT,doctor,169
+show oldest customers first,SORT,customer,169
+show oldest orders first,SORT,order,169
+show oldest patients first,SORT,patient,169
+order customers alphabetically by salary,SORT,customer,170
+order students alphabetically by age,SORT,student,170
+order suppliers alphabetically by date,SORT,supplier,170
+order patients alphabetically by salary,SORT,patient,170
+users must log in to access invoices,AUTHENTICATION,invoice,171
+users must log in to access customers,AUTHENTICATION,customer,171
+users must log in to access vehicles,AUTHENTICATION,vehicle,171
+users must log in to access courses,AUTHENTICATION,course,171
+only logged in users can see books,AUTHENTICATION,book,172
+only logged in users can see movies,AUTHENTICATION,movie,172
+only logged in users can see hotels,AUTHENTICATION,hotel,172
+only logged in users can see suppliers,AUTHENTICATION,supplier,172
+add login and signup for the ticket api,AUTHENTICATION,ticket,173
+add login and signup for the student api,AUTHENTICATION,student,173
+add login and signup for the doctor api,AUTHENTICATION,doctor,173
+add login and signup for the invoice api,AUTHENTICATION,invoice,173
+register a new user account,AUTHENTICATION,none,174
+users should sign in with email and password,AUTHENTICATION,none,175
+protect the order endpoints with authentication,AUTHENTICATION,order,176
+protect the book endpoints with authentication,AUTHENTICATION,book,176
+protect the hotel endpoints with authentication,AUTHENTICATION,hotel,176
+protect the patient endpoints with authentication,AUTHENTICATION,patient,176
+add jwt authentication to the hotel api,AUTHENTICATION,hotel,177
+add jwt authentication to the doctor api,AUTHENTICATION,doctor,177
+add jwt authentication to the product api,AUTHENTICATION,product,177
+add jwt authentication to the ticket api,AUTHENTICATION,ticket,177
+users can sign up and log in,AUTHENTICATION,none,178
+require a password to access orders,AUTHENTICATION,order,179
+require a password to access books,AUTHENTICATION,book,179
+require a password to access courses,AUTHENTICATION,course,179
+require a password to access teachers,AUTHENTICATION,teacher,179
+secure the patient api with token based login,AUTHENTICATION,patient,180
+secure the hotel api with token based login,AUTHENTICATION,hotel,180
+secure the supplier api with token based login,AUTHENTICATION,supplier,180
+secure the doctor api with token based login,AUTHENTICATION,doctor,180
+add user registration and login,AUTHENTICATION,none,181
+only authorized users can manage invoices,AUTHENTICATION,invoice,182
+only authorized users can manage teachers,AUTHENTICATION,teacher,182
+only authorized users can manage vehicles,AUTHENTICATION,vehicle,182
+only authorized users can manage tickets,AUTHENTICATION,ticket,182
+users should be able to log out,AUTHENTICATION,none,183
+authenticate users before they use the hotel api,AUTHENTICATION,hotel,184
+authenticate users before they use the course api,AUTHENTICATION,course,184
+authenticate users before they use the product api,AUTHENTICATION,product,184
+authenticate users before they use the order api,AUTHENTICATION,order,184
+add a login system with username and password,AUTHENTICATION,none,185
+restrict customer access to registered users,AUTHENTICATION,customer,186
+restrict ticket access to registered users,AUTHENTICATION,ticket,186
+restrict teacher access to registered users,AUTHENTICATION,teacher,186
+restrict order access to registered users,AUTHENTICATION,order,186
+verify user credentials,AUTHENTICATION,none,187
+implement sign in and sign out,AUTHENTICATION,none,188
+protect tickets with a password,AUTHENTICATION,ticket,189
+protect patients with a password,AUTHENTICATION,patient,189
+protect books with a password,AUTHENTICATION,book,189
+protect doctors with a password,AUTHENTICATION,doctor,189
+secure login for the vehicle api,AUTHENTICATION,vehicle,190
+secure login for the employee api,AUTHENTICATION,employee,190
+secure login for the hotel api,AUTHENTICATION,hotel,190
+secure login for the customer api,AUTHENTICATION,customer,190
+restrict the api to authorized accounts,AUTHENTICATION,none,191
+check credentials with a token,AUTHENTICATION,none,192
+account registration with email and password,AUTHENTICATION,none,193
+the hotel api needs authentication,AUTHENTICATION,hotel,194
+the book api needs authentication,AUTHENTICATION,book,194
+the employee api needs authentication,AUTHENTICATION,employee,194
+the customer api needs authentication,AUTHENTICATION,customer,194
