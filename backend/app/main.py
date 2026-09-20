@@ -11,6 +11,7 @@ from app.config import APP_NAME, APP_VERSION
 from app.database import models  # noqa: F401  (importing registers the tables)
 from app.database.database import Base, engine
 from app.nlp.routes import router as nlp_router
+from app.projects.dashboard import router as dashboard_router
 from app.projects.routes import router as projects_router
 from app.specification.routes import router as spec_router
 from app.testing.routes import router as testing_router
@@ -20,20 +21,21 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title=APP_NAME, version=APP_VERSION)
 
-# lets the React frontend (later phase) call this server
+# lets the React frontend (port 5173) call this server
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 login_required = [Depends(get_current_user)]
 
-app.include_router(auth_router)     
-app.include_router(repair_router)                                # Phase 9: self-repair loop (login inside)                             # Phase 7: register / login
-app.include_router(projects_router) 
-app.include_router(agent_router)                                 # Phase 8: chat agent (login inside)                             # Phase 7: saved projects (login inside)
+app.include_router(auth_router)                                  # Phase 7: register / login
+app.include_router(projects_router)                              # Phase 7: saved projects (login inside)
+app.include_router(agent_router)                                 # Phase 8: chat agent (login inside)
+app.include_router(repair_router)                                # Phase 9: self-repair loop (login inside)
+app.include_router(dashboard_router)                             # Phase 10: dashboard numbers (login inside)
 app.include_router(nlp_router)                                   # Phase 2-3: analysis only, stays open for demos
 app.include_router(spec_router)                                  # Phase 4: analysis only, stays open for demos
 app.include_router(codegen_router, dependencies=login_required)  # Phase 5: writes files -> login required

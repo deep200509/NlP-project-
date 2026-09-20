@@ -1,0 +1,129 @@
+/* Design tokens. Colour carries meaning here: the four HTTP method colours are the
+   only bright colours in the app, so a route is recognisable anywhere it appears. */
+:root {
+  --ink: #1b2440;
+  --ink-soft: #2a3558;
+  --paper: #f6f7fb;
+  --surface: #ffffff;
+  --line: #dce1ec;
+  --text: #1f2637;
+  --muted: #667089;
+  --action: #3450c7;
+  --action-dark: #27409f;
+  --get: #1c6fc4;
+  --post: #2b8a3e;
+  --put: #c9710a;
+  --delete: #cf2f2f;
+  --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", Consolas, "Courier New", monospace;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin: 0; font-family: var(--sans); font-size: 16px; line-height: 1.5; color: var(--text); background: var(--paper); }
+h1 { font-size: 1.75rem; line-height: 1.2; font-weight: 600; margin: 0 0 0.25rem; letter-spacing: -0.01em; }
+h2 { font-size: 1.1rem; font-weight: 600; margin: 0 0 0.75rem; }
+p { margin: 0; }
+a { color: var(--action); }
+:focus-visible { outline: 3px solid #8fa2f5; outline-offset: 2px; border-radius: 4px; }
+
+.muted { color: var(--muted); }
+.splash { padding: 4rem; text-align: center; color: var(--muted); }
+.error { color: #a52222; background: #fdecec; border: 1px solid #f3c2c2; padding: 0.6rem 0.8rem; border-radius: 6px; font-size: 0.95rem; }
+.empty { color: var(--muted); background: var(--surface); border: 1px dashed var(--line); padding: 1.25rem; border-radius: 8px; }
+
+/* buttons */
+.button { display: inline-block; font: inherit; font-weight: 500; color: #fff; background: var(--action); border: 0;
+  padding: 0.65rem 1.1rem; border-radius: 6px; cursor: pointer; text-decoration: none; }
+.button:hover { background: var(--action-dark); }
+.button:disabled { opacity: 0.6; cursor: wait; }
+.button-quiet { font: inherit; font-size: 0.9rem; color: #c9d1ea; background: transparent; border: 1px solid #3c4a75;
+  padding: 0.4rem 0.75rem; border-radius: 6px; cursor: pointer; }
+.button-quiet:hover { color: #fff; border-color: #6c7bb0; }
+
+/* routes with method badges */
+.endpoints { list-style: none; margin: 0; padding: 0; font-family: var(--mono); font-size: 0.95rem; }
+.endpoints li { display: flex; align-items: baseline; gap: 0.75rem; padding: 0.4rem 0; }
+.endpoints li + li { border-top: 1px solid var(--line); }
+.endpoints-dark li + li { border-top-color: rgba(255, 255, 255, 0.12); }
+.method { flex: 0 0 4.6rem; text-align: center; font-size: 0.8rem; font-weight: 500; color: #fff; padding: 0.15rem 0; border-radius: 4px; }
+.method-get { background: var(--get); }
+.method-post { background: var(--post); }
+.method-put, .method-patch { background: var(--put); }
+.method-delete { background: var(--delete); }
+.endpoints .summary { font-family: var(--sans); color: var(--muted); font-size: 0.9rem; margin-left: auto; }
+.endpoints-dark .path { color: #eef1fb; }
+
+/* login and register */
+.auth { min-height: 100%; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
+.auth-demo { background: var(--ink); color: #c9d1ea; padding: 3.5rem clamp(1.5rem, 5vw, 4.5rem); display: flex; flex-direction: column; justify-content: center; }
+.auth-brand { color: #fff; font-weight: 600; font-size: 1.05rem; margin-bottom: 3rem; }
+.auth-quote { font-size: 1.3rem; line-height: 1.5; color: #fff; max-width: 34rem; }
+.auth-becomes { margin: 1.75rem 0 0.75rem; color: #8e9bc4; }
+.auth-demo .endpoints { max-width: 24rem; }
+.auth-foot { margin-top: 1.5rem; color: #8e9bc4; }
+.auth-form { display: flex; align-items: center; justify-content: center; padding: 2rem 1.5rem; background: var(--surface); }
+.auth-form form { width: 100%; max-width: 22rem; display: grid; gap: 1rem; }
+.auth-form h1 { margin-bottom: 0.5rem; }
+label { display: grid; gap: 0.3rem; font-weight: 500; font-size: 0.95rem; }
+input, textarea { font: inherit; color: var(--text); padding: 0.6rem 0.7rem; border: 1px solid #c3cadb; border-radius: 6px; background: #fff; }
+input:focus, textarea:focus { border-color: var(--action); }
+.hint { font-weight: 400; font-size: 0.85rem; color: var(--muted); }
+.switch { font-size: 0.95rem; color: var(--muted); }
+
+/* app shell */
+.shell { min-height: 100%; display: grid; grid-template-columns: 15rem minmax(0, 1fr); }
+.sidebar { background: var(--ink); color: #c9d1ea; padding: 1.5rem 1rem; display: flex; flex-direction: column; gap: 2rem;
+  position: sticky; top: 0; height: 100vh; }
+.brand { color: #fff; font-weight: 600; padding: 0 0.6rem; }
+.brand span { display: block; font-weight: 400; font-size: 0.8rem; color: #8e9bc4; }
+.sidebar nav { display: grid; gap: 0.15rem; }
+.sidebar nav a { color: #c9d1ea; text-decoration: none; padding: 0.55rem 0.6rem; border-radius: 6px; border-left: 3px solid transparent; }
+.sidebar nav a:hover { background: var(--ink-soft); color: #fff; }
+.sidebar nav a.active { background: var(--ink-soft); color: #fff; border-left-color: #8fa2f5; }
+.account { margin-top: auto; padding: 1rem 0.6rem 0; border-top: 1px solid #3c4a75; display: grid; gap: 0.15rem; }
+.account-name { color: #fff; font-weight: 500; }
+.account-email { font-size: 0.85rem; color: #8e9bc4; overflow-wrap: anywhere; margin-bottom: 0.6rem; }
+.content { padding: 2.5rem clamp(1.25rem, 4vw, 3.5rem); }
+.page { max-width: 62rem; display: grid; gap: 2.25rem; }
+.page-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap; }
+
+/* dashboard figures: one ledger strip, not four separate cards */
+.figures { margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 8px; }
+.figures > div { padding: 1.1rem 1.25rem; display: flex; flex-direction: column; }
+.figures > div + div { border-left: 1px solid var(--line); }
+.figures dd { margin: 0; font-size: 2rem; font-weight: 600; line-height: 1.1; color: var(--ink); font-variant-numeric: tabular-nums; }
+.figures dt { color: var(--muted); font-size: 0.9rem; margin-top: 0.25rem; }
+
+/* tables */
+.list { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.list th { text-align: left; font-weight: 500; font-size: 0.85rem; color: var(--muted); background: #eef1f8; padding: 0.6rem 1rem; }
+.list td { padding: 0.75rem 1rem; border-top: 1px solid var(--line); }
+.list td a { font-weight: 500; text-decoration: none; }
+.list td a:hover { text-decoration: underline; }
+.tag { display: inline-block; font-size: 0.8rem; font-weight: 500; padding: 0.15rem 0.55rem; border-radius: 999px; background: #e8ebf4; color: #4a5470; }
+.tag-tests_passed { background: #e3f4e7; color: #1f6b30; }
+.tag-tests_failed { background: #fdecec; color: #a52222; }
+
+.conversation-link { display: grid; gap: 0.15rem; text-decoration: none; color: var(--text); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 8px; padding: 0.9rem 1.1rem; }
+.conversation-link:hover { border-color: var(--action); }
+.conversation-link span { color: var(--muted); font-size: 0.95rem; }
+
+/* small screens: the sidebar becomes a top bar, the login demo moves under the form */
+@media (max-width: 820px) {
+  .shell { grid-template-columns: 1fr; }
+  .sidebar { position: static; height: auto; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; }
+  .brand span { display: none; }
+  .sidebar nav { display: flex; flex-wrap: wrap; }
+  .sidebar nav a { border-left: 0; }
+  .account { margin: 0 0 0 auto; padding: 0; border: 0; }
+  .account-name, .account-email { display: none; }
+  .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .figures > div:nth-child(3) { border-left: 0; }
+  .figures > div:nth-child(n + 3) { border-top: 1px solid var(--line); }
+  .auth { grid-template-columns: 1fr; }
+  .auth-form { order: -1; }
+  .list { display: block; overflow-x: auto; }
+}
